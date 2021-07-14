@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class Employee {
+    static String organization;
+    String name, emailID;
+    long mobileNO;
+    int extNO;
+    void getDetails(){
+        Scanner s = new Scanner(System.in);
+        System.out.print("Name: ");
+        name = s.nextLine();
+        System.out.print("Email ID: ");
+        emailID = s.nextLine();
+        System.out.print("Mobile Number: ");
+        mobileNO = s.nextLong();
+        System.out.print("Extension: ");
+        extNO = s.nextInt();
+    }
+    void display(){
+        
+        System.out.println("\n");
+        System.out.println("Name of the Employee\t: "+name);
+        System.out.println("Email ID\t\t: "+emailID);
+        System.out.println("Mobile Number\t\t: "+mobileNO);
+        System.out.println("Extenstion Number\t: "+extNO);
+    }
+    public static void main(String[] args) {
+        Employee a = new Employee();
+        Employee b = new Employee();
+        a.getDetails();
+        b.getDetails();
+		System.out.println("\t\t\t********EMPLOYEE DETAILS OF ABC ORGANIZATION********");
+		a.display();
+		b.display();
+    }
+}
