@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class Bill {
+    String Product;
+    int Quantity;
+    double Price;
+    double Amount;
+    double Net;
+	double Price1;
+    void getStockDetails(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Product: ");
+        Product = input.nextLine();
+        System.out.println("Quantity: ");
+        Quantity = input.nextInt();
+        System.out.println("Net: ");
+        Net = input.nextDouble();
+        Price1 = (Quantity*Net);
+    }
+    void display(){
+        System.out.println(Product+"\t\t"+Quantity+"\t\t"+Net+"\t\t"+Price1);	
+    }
+    public static void main(String[] args){
+		double x;
+        Bill a = new Bill();
+		Bill b = new Bill();
+        a.getStockDetails();
+		b.getStockDetails();
+		System.out.println("\t\t\t***BILL DETAILS***\t\t\t");
+		System.out.println("--------------------------------------------------------------------");
+		System.out.println("Product\t\tQuantity\tNet\t\tPrice");
+        System.out.println("---------------------------------------------------------------------");
+        a.display();
+		b.display();
+		x = a.Price1+b.Price1;
+		System.out.println("---------------------------------------------------------------------");
+		System.out.println("\t\t\t\tAmount"+"\t\t"+x);
+		System.out.println("=====================================================================");
+    }
+}
