@@ -1,0 +1,58 @@
+import java.util.Scanner;
+public class Exam {
+    int rollNO, s1, s2, s3, s4, s5, avg, total;
+    int count1, count2;
+    double percentage;
+    String tamil, english, maths, science, social;
+    
+    void getMarks(){
+        Scanner a = new Scanner(System.in);
+        System.out.println("Enter the roll number\t: ");
+        rollNO = a.nextInt();
+        System.out.println("Enter the mark in Tamil\t: ");
+        s1 = a.nextInt();
+        System.out.println("Enter the mark in English\t: ");
+        s2 = a.nextInt();
+        System.out.println("Enter the mark in Maths\t: ");
+        s3 = a.nextInt();
+        System.out.println("Enter the mark in Science\t: ");
+        s4 = a.nextInt();
+        System.out.println("Enter the mark in Social\t: ");
+        s5 = a.nextInt();
+        if(s1>=35 && s2>=35 && s3>=35 && s4>=35 && s5>=35){
+            count1=0+count1;
+        }
+        else{   
+            count2=0+count2;
+        }
+    }
+    void calculation(){
+        total = s1+s2+s3+s4+s5;
+        avg = total/5;
+        
+    }
+    void display(){
+        System.out.println(rollNO+"\t"+s1+"\t"+s2+"\t"+s3+"\t"+s4+"\t"+s5+"\t"+total+"\t"+avg);
+        
+    }
+    public static void main(String[] args) {
+        int count1=0, count2=0;
+        Exam obj[] = new Exam[10];
+        Scanner a = new Scanner(System.in);
+        System.out.println("Enter the size of the array");
+        int size = a.nextInt();
+        for(int i=0; i<size; i++){
+            obj[i] = new Exam();
+            obj[i].getMarks();
+            obj[i].calculation();
+        }
+        System.out.println("*****Result*****");
+        System.out.println("Roll No\tTamil\tEnglish\tMaths\tScience\tSocial\tTotal\tAverage");
+        for(int i=0; i<size; i++){
+        obj[i].display();
+        }
+        
+        System.out.println("Cleared: "+count1);
+        System.out.println("Not Cleared: "+count2);
+    }
+}
