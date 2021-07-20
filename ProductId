@@ -1,0 +1,19 @@
+public class ProductId {
+    String name;
+    int id;
+    ProductId(String x, int y){
+        name = x;
+        id = y;
+    }
+    void display(){
+        System.out.println("Name: "+name);
+        System.out.println("ID: "+id);
+    }
+    public static void main(String[] args) {
+        ProductId a = new ProductId("book", 01);  
+        ProductId b = new ProductId("pen", 02);
+        System.out.println(a.name);
+        System.out.println(a.id);
+        System.out.println(b.name);
+    }
+}
