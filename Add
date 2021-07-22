@@ -1,0 +1,10 @@
+public class Add {
+    int myMethod(){
+        int x=10, y=5;
+        return ((x*x)+(y*y));
+    }
+    public static void main(String[] args) {
+        int a = new Add().myMethod();
+        System.out.println(a);
+    }
+}
