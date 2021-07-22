@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class One{
+    int a, b;
+    void input(){
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the two numbers: ");
+        a = s.nextInt();
+        b = s.nextInt();
+    }
+}
+class Two extends One{
+    void add(){
+        System.out.println(a+b);
+    }
+}
+public class ClassSingle {
+    public static void main(String[] args) {
+        Two obj = new Two();
+        obj.input();
+        obj.add();
+    }
+}
